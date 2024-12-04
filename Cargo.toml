@@ -1,0 +1,16 @@
+[package]
+name = "test-app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = { version = "1.0"}
+tokio = { version = "1.41", features = ["full"]}
+tokio-util = { version = "0.7"}
+tracing = { version = "0.1"}
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+serde = { version = "1.0", features = ["derive"] }
+tower = { version = "0.5", features = ["timeout"] }
+tower-http = { version = "0.6", features = ["timeout", "trace"] }
+axum = { version = "0.7", features = ["tracing", "macros"] }
+axum-extra = {version = "0.9", features = ["typed-header"]}
